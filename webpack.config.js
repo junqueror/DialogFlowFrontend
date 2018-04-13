@@ -2,11 +2,14 @@ const path = require('path')
 const webpack = require('webpack')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
+// Plugin for inject html in template
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
+    publicPath: '/',
     filename: 'build.js'
   },
   module: {
@@ -62,6 +65,16 @@ if (process.env.NODE_ENV === 'production') {
       'process.env': {
         NODE_ENV: '"production"'
       }
+    }),
+    new HtmlWebpackPlugin({
+      title: 'DialogFlow Bot',
+      template: `./index.html`,
+      // minify: {
+      //   collapseWhitespace: true,
+      //   collapseInlineTagWhitespace: true,
+      //   removeComments: true,
+      //   removeRedundantAttributes: true,
+      // },
     }),
     new UglifyJSPlugin({
       parallel: true,
