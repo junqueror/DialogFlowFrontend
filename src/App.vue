@@ -157,9 +157,10 @@
 
 <script>
 import { ApiAiClient } from 'api-ai-javascript'
+import { ApiAiConstants } from 'api-ai-javascript'
 import config from './../config'
 
-const client = new ApiAiClient({accessToken: config.app.token}) // <- replace it with yours
+const client = new ApiAiClient({accessToken: config.app.token, lang: ApiAiConstants.AVAILABLE_LANGUAGES.ES}) // <- replace it with yours
 
 export default {
     name: 'app',
