@@ -1,2 +1,1 @@
-web: npm install
-web: npm run awesome
+web: npm run heroku
