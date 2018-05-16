@@ -133,8 +133,9 @@
         <br>
         <p class="copyright" v-if="answers.length > 0 && config.app.watermark">Proudly powered by <a href="https://mish.io">Ushakov</a> & <a href="https://dialogflow.com">Dialogflow</a></p>
         <a id="bottom"></a>
+    </main>
 
-            <!-- The input -->
+    <!-- The input -->
     <div class="query">
         <div class="wrapper" v-if="micro == false">
             <i class="material-icons iicon" @click="microphone(true)">mic</i>
@@ -142,12 +143,11 @@
             <i class="material-icons iicon t2s" @click="mute(true)" v-if="muted == false">volume_up</i>
             <i class="material-icons iicon t2s" @click="mute(false)" v-else>volume_off</i>
         </div>
-        <div class="wrapper" v-else>
-            <i class="material-icons iicon recording" @click="microphone(false)">mic</i><input class="queryform" :placeholder="speech" readonly>   
-        </div>
+    <div class="wrapper" v-else>
+        <i class="material-icons iicon recording" @click="microphone(false)">mic</i><input class="queryform" :placeholder="speech" readonly>   
     </div>
-    
-    </main>
+
+    </div>
 </section>
 </template>
 
