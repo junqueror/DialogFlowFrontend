@@ -67,7 +67,7 @@ if (process.env.NODE_ENV === 'production') {
       }
     }),
     new HtmlWebpackPlugin({
-      title: 'DialogFlow Bot',
+      title: 'Smart Aleck',
       template: `./index.html`,
       // minify: {
       //   collapseWhitespace: true,

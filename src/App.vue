@@ -9,12 +9,12 @@
         <!-- Display Welcome Message -->
         <div v-if="answers.length == 0 && online == true">
             <h1 class="title mdc-typography--headline">
-                <div class="material-icons up">arrow_upward</div>
-                <br>
-                <br>
                     {{config.locale.strings.welcomeTitle}}
 
                     <p class="mdc-typography--body2">{{config.locale.strings.welcomeDescription}}</p>
+                <br>
+                <br>
+                <div class="material-icons up">arrow_downward</div>
             </h1>
         </div>
 
@@ -138,9 +138,9 @@
     <!-- The input -->
     <div class="query">
         <div class="wrapper" v-if="micro == false">
-            <i class="material-icons iicon" @click="microphone(true)">mic</i>
-            <input :aria-label="config.locale.strings.queryTitle" autocomplete="off" v-model="query" class="queryform" @keyup.enter="submit()" :placeholder="config.locale.strings.queryTitle" autofocus type="text">
             <i class="material-icons iicon t2s" @click="mute(true)" v-if="muted == false">volume_up</i>
+            <input :aria-label="config.locale.strings.queryTitle" autocomplete="off" v-model="query" class="queryform" @keyup.enter="submit()" :placeholder="config.locale.strings.queryTitle" autofocus type="text">
+            <i class="material-icons iicon" @click="microphone(true)">mic</i>
             <i class="material-icons iicon t2s" @click="mute(false)" v-else>volume_off</i>
         </div>
     <div class="wrapper" v-else>

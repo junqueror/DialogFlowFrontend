@@ -7,7 +7,7 @@ export default {
     locale: {
         strings: {
             welcomeTitle: "Hola, pregunta algo para comenzar",
-            welcomeDescription: `Puedes escribit "Hola" por ejemplo. O simplemente presionar el micrófono y comenzar a hablar`,
+            welcomeDescription: `Puedes escribir "Hola" por ejemplo. O simplemente presionar el micrófono y comenzar a hablar`,
             offlineTitle: "Oh, no!",
             offlineDescription: "Parece que no estás conectado a Internet, este asistente virtual necesita conexión a Internet para poder atender tus consultas",
             queryTitle: "Pregúntame algo...",
