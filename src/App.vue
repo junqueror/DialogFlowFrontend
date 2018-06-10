@@ -138,7 +138,7 @@
     <!-- The input -->
     <div class="query">
         <div class="wrapper" v-if="micro == false">
-            <i class="material-icons iicon t2s" @click="mute(true)" v-if="muted == false">volume_up</i>
+            <i class="material-icons iicon" @click="mute(true)" v-if="muted == false">volume_up</i>
             <i class="material-icons iicon" @click="mute(false)" v-else>volume_off</i>
             <input :aria-label="config.locale.strings.queryTitle" autocomplete="off" v-model="query" class="queryform" @keyup.enter="submit()" :placeholder="config.locale.strings.queryTitle" autofocus type="text">
             <i class="material-icons iicon t2s" @click="microphone(true)">mic</i>
