@@ -40,7 +40,7 @@
 
             <!-- Dialogflow messages -->
             <tr>
-                <td>
+                <td class="messages">
 
                     <!-- Bot message types / Speech -->
 
