@@ -239,7 +239,7 @@ export default {
             console.log("buttonText", buttonText);
             if (buttonText.includes("COMPRAR") || buttonText.includes("comprar") || buttonText.includes("Comprar")) {
                 this.query = "Feedback";
-                setTimeout(this.submit(), 5000);
+                setTimeout(this.submit(), 10000);
             }
         },
     }
