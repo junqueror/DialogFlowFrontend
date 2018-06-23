@@ -240,7 +240,7 @@ export default {
             if (buttonText.includes("COMPRAR") || buttonText.includes("comprar") || buttonText.includes("Comprar")) {
                 setTimeout(function(){ 
                     console.log("COMPRAR"); 
-                    this.query = text;
+                    this.query = buttonText;
                     this.submit();
                 }, 5000);
             }
