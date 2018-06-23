@@ -250,7 +250,7 @@ export default {
                 this.query = ''
                 this.speech = config.locale.strings.voiceTitle // <- reset query and speech
             })
-        },
+            };
         },
     }
 }
