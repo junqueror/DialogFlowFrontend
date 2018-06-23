@@ -234,16 +234,16 @@ export default {
                     self.autosubmit(self.speech)
 			    }
             }
-        }
+        },
         sendNotificationTrigger(buttonText) {
             console.log("buttonText", buttonText);
             if (buttonText.includes("COMPRAR") || buttonText.includes("comprar")){
                 setTimeout(function(){ 
                     console.log("COMPRAR"); 
                     sendNotification("COMPRAR");
-            }, 10000);
+                }, 10000);
             }
-        }
+        },
         sendNotification(text) {
             console.log("In sendNotification", text);
         }
