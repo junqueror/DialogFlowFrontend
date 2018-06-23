@@ -238,7 +238,7 @@ export default {
         sendNotificationTrigger(buttonText) {
             console.log("buttonText", buttonText);
             if (buttonText.includes("COMPRAR") || buttonText.includes("comprar") || buttonText.includes("Comprar")) {
-                this.query = buttonText;
+                this.query = "Feedback";
                 setTimeout(this.submit(), 5000);
             }
         },
