@@ -240,15 +240,11 @@ export default {
             if (buttonText.includes("COMPRAR") || buttonText.includes("comprar") || buttonText.includes("Comprar")) {
                 setTimeout(function(){ 
                     console.log("COMPRAR"); 
-                    this.sendNotification("COMPRAR");
-                }, 10000);
+                    this.query = text;
+                    this.submit();
+                }, 5000);
             }
         },
-        sendNotification(text) {
-            console.log("In sendNotification", text);
-            this.query = text;
-            this.submit();
-        }
     }
 }
 </script>
