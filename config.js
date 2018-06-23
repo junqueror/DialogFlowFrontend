@@ -6,7 +6,8 @@ export default {
     },
     locale: {
         strings: {
-            welcomeTitle: "Smart Aleck",
+            welcomeTitle1: "Smart",
+            welcomeTitle2: "Aleck",
             welcomeSubTitle: "Tu asistente virtual para compras online",
             welcomeDescription: `Puedes escribir "Hola" por ejemplo. O simplemente presionar el micrófono y comenzar a hablar`,
             offlineTitle: "Oh, no!",

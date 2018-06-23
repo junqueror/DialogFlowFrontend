@@ -10,8 +10,8 @@
         <div v-if="answers.length == 0 && online == true">
             <h1 class="title mdc-typography--headline">
                 <img src="./SmartAleck.png">
-                <span>{{config.locale.strings.welcomeTitle1}}</span><span class="title2">{{config.locale.strings.welcomeTitle2}}</span>
-                <span class="subTitle">{{config.locale.strings.welcomeSubTitle}}<span>
+                <p><span>{{config.locale.strings.welcomeTitle1}}</span><span class="title2">{{config.locale.strings.welcomeTitle2}}</span>
+                <span class="subTitle">{{config.locale.strings.welcomeSubTitle}}<span></p>
                 <p class="mdc-typography--body2">{{config.locale.strings.welcomeDescription}}</p>
                 <br>
                 <br>
