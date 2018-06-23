@@ -238,9 +238,17 @@ export default {
         sendNotificationTrigger(buttonText) {
             console.log("buttonText", buttonText);
             if (buttonText.includes("COMPRAR") || buttonText.includes("comprar") || buttonText.includes("Comprar")) {
-                this.query = "Feedback";
-                setTimeout(this.submit(), 10000);
+                setTimeout(submitQuery("feedback"), 10000);
             }
+        },
+        submitQuery(query){
+            client.textRequest(query).then((response) => {
+                this.answers.push(response)
+                this.handle(response) // <- handle the response in handle() method
+
+                this.query = ''
+                this.speech = config.locale.strings.voiceTitle // <- reset query and speech
+            })
         },
     }
 }
