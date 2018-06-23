@@ -241,8 +241,8 @@ export default {
                     this.submitQuery("feedback");
                 }, 10000);
             }
-        },
-        submitQuery(query){
+
+            submitQuery(query){
             client.textRequest(query).then((response) => {
                 this.answers.push(response)
                 this.handle(response) // <- handle the response in handle() method
@@ -250,6 +250,7 @@ export default {
                 this.query = ''
                 this.speech = config.locale.strings.voiceTitle // <- reset query and speech
             })
+        },
         },
     }
 }
