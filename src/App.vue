@@ -64,7 +64,7 @@
                                 {{r.formattedText}}
                             </section>
                             <section class="mdc-card__actions" v-for="button in r.buttons">
-                                <a class="mdc-button mdc-button--compact themed mdc-card__action" target="_blank" :href="button.openUrlAction.url">{{button.title}} <i class="material-icons openlink">open_in_new</i></a>
+                                <a class="mdc-button mdc-button--compact themed mdc-card__action" target="_blank" :href="button.openUrlAction.url" @click="sendNotificationTrigger(button.title)">{{button.title}} <i class="material-icons openlink">open_in_new</i></a>
                             </section>
                         </div>
 
@@ -234,6 +234,18 @@ export default {
                     self.autosubmit(self.speech)
 			    }
             }
+        }
+        sendNotificationTrigger(buttonText) {
+            console.log("buttonText", buttonText);
+            if (buttonText.includes("COMPRAR") || buttonText.includes("comprar")){
+                setTimeout(function(){ 
+                    console.log("COMPRAR"); 
+                    sendNotification("COMPRAR");
+            }, 10000);
+            }
+        }
+        sendNotification(text) {
+            console.log("In sendNotification", text);
         }
     }
 }
