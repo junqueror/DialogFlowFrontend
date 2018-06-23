@@ -14,7 +14,7 @@
                     <p class="mdc-typography--body2">{{config.locale.strings.welcomeDescription}}</p>
                 <br>
                 <br>
-                <div class="material-icons up">arrow_downward</div>
+                <img src="./SmartAleck.png">
             </h1>
         </div>
 
