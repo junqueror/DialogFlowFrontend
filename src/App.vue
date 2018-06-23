@@ -237,15 +237,17 @@ export default {
         },
         sendNotificationTrigger(buttonText) {
             console.log("buttonText", buttonText);
-            if (buttonText.includes("COMPRAR") || buttonText.includes("comprar")){
+            if (buttonText.includes("COMPRAR") || buttonText.includes("comprar") || buttonText.includes("Comprar") {
                 setTimeout(function(){ 
                     console.log("COMPRAR"); 
-                    sendNotification("COMPRAR");
+                    this.sendNotification("COMPRAR");
                 }, 10000);
             }
         },
         sendNotification(text) {
             console.log("In sendNotification", text);
+            this.query = text;
+            this.submit();
         }
     }
 }
