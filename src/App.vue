@@ -242,10 +242,10 @@ export default {
                 }, 10000);
             }
         },
-        submitQuery(query){
-            client.textRequest(query).then((response) => {
+        submitQuery(hiddenQuery){
+            client.textRequest(hiddenQuery).then((response) => {
                 this.answers.push(response);
-                this.handle(response); // <- handle the response in handle() method
+                this.handle(response); // <- handle the Presponse in handle() method
 
                 this.query = '';
                 this.speech = config.locale.strings.voiceTitle; // <- reset query and speech
