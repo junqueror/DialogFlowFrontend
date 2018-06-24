@@ -238,12 +238,17 @@ export default {
         sendNotificationTrigger(buttonText) {
             if (buttonText.includes("COMPRAR") || buttonText.includes("comprar") || buttonText.includes("Comprar")) {
                 setTimeout(() => { 
-                    this.submitQuery("feedback");
-                }, 10000);
+                    // this.submitQuery("feedback");
+                }, 3000);
             }
         },
         submitQuery(hiddenQuery){
+            console.log('this.query', this.query);
+            console.log('hiddenQuery', hiddenQuery);
+            this.query = '';
+            console.log('this.query', this.query);
             client.textRequest(hiddenQuery).then((response) => {
+                this.query = '';
                 this.answers.push(response);
                 this.handle(response); // <- handle the Presponse in handle() method
 
