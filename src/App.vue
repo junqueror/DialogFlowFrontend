@@ -11,7 +11,7 @@
             <h1 class="title mdc-typography--headline">
                 <img src="./SmartAleck.png">
                 <p><span class="title1">{{config.locale.strings.welcomeTitle1}}</span><span class="title2">{{config.locale.strings.welcomeTitle2}}</span></p>
-                <p><span class="subTitle">{{config.locale.strings.welcomeSubTitle}}</p>
+                <p><span class="subTitle">{{config.locale.strings.welcomeSubTitle}}</span></p>
                 <p class="mdc-typography--body2">{{config.locale.strings.welcomeDescription}}</p>
                 <br>
                 <br>
@@ -34,7 +34,7 @@
         <table v-for="a in answers" class="chat-window">
 
             <!-- Your messages -->
-            <tr>
+            <tr v-if="a.result.resolvedQuery !== ''">
                 <td class="bubble">{{a.result.resolvedQuery}}</td>
             </tr>
 
@@ -237,13 +237,14 @@ export default {
         },
         sendNotificationTrigger(buttonText) {
             if (buttonText.includes("COMPRAR") || buttonText.includes("comprar") || buttonText.includes("Comprar")) {
-                setTimeout(() => { 
+                setTimeout(() => {
                     this.submitQuery("feedback");
-                }, 10000);
+                }, 3000);
             }
         },
         submitQuery(hiddenQuery){
             client.textRequest(hiddenQuery).then((response) => {
+                response.result.resolvedQuery = '';
                 this.answers.push(response);
                 this.handle(response); // <- handle the Presponse in handle() method
 
