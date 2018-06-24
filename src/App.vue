@@ -240,7 +240,7 @@ export default {
 	    	this.answers = [];
                 setTimeout(() => {
                     this.submitQuery("feedback");
-                }, 30000);
+                }, 10000);
             }
         },
         submitQuery(hiddenQuery){
