@@ -237,9 +237,10 @@ export default {
         },
         sendNotificationTrigger(buttonText) {
             if (buttonText.includes("COMPRAR") || buttonText.includes("comprar") || buttonText.includes("Comprar")) {
+	    	this.answers = [];
                 setTimeout(() => {
                     this.submitQuery("feedback");
-                }, 3000);
+                }, 30000);
             }
         },
         submitQuery(hiddenQuery){
